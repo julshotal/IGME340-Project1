@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hotaling_Magneto1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9A2-y4-6CG">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="fcw-0h-pKy"/>
+                                    <barButtonItem title="Load Photo" id="hfd-3S-MU9">
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" id="d3a-Bu-Fan"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="82d-MI-Q2x"/>
+                                    <barButtonItem title="Word Sets" id="j1d-Kk-r86">
+                                        <connections>
+                                            <segue destination="Dc8-TQ-kWE" kind="popoverPresentation" popoverAnchorBarButtonItem="j1d-Kk-r86" id="W2z-Ry-B7L">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qCO-mU-dHf"/>
+                                    <barButtonItem title="Share" id="HEb-SP-W3g">
+                                        <connections>
+                                            <action selector="share:" destination="BYZ-38-t0r" id="jjh-Dg-Yx1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Itl-7A-Ulq"/>
+                                    <barButtonItem title="Help" id="wq9-SS-UzU">
+                                        <connections>
+                                            <segue destination="5c3-Uu-jDV" kind="popoverPresentation" popoverAnchorBarButtonItem="wq9-SS-UzU" id="ABM-uB-2EE">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cy1-kA-yHI"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9A2-y4-6CG" secondAttribute="bottom" id="HDp-dz-GIb"/>
+                            <constraint firstItem="9A2-y4-6CG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gxH-WZ-frb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9A2-y4-6CG" secondAttribute="trailing" id="wFs-ZX-aAf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666.66666666666674" y="18.75"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="RW2-l1-f62">
+            <objects>
+                <tableViewController id="C7g-Dx-Fec" customClass="MenuVC" customModule="Hotaling_Magneto1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IjS-TL-9if">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="simpleCell" id="mqC-tT-k6M">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mqC-tT-k6M" id="boZ-97-mAz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C7g-Dx-Fec" id="jHK-g5-f7x"/>
+                            <outlet property="delegate" destination="C7g-Dx-Fec" id="lXb-h5-xie"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gR4-3v-XzH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LiT-7f-cGb">
+                            <connections>
+                                <action selector="cancelTapped" destination="C7g-Dx-Fec" id="fH8-d5-RBV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="vHQ-1t-vQx">
+                            <connections>
+                                <segue destination="ebh-wc-XMA" kind="unwind" identifier="DoneTapped" unwindAction="unwindToMainWithSegue:" id="yZv-pU-gD7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEm-H6-K2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ebh-wc-XMA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2481.1594202898555" y="19.419642857142858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oXn-80-qOy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dc8-TQ-kWE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="glZ-RK-41f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C7g-Dx-Fec" kind="relationship" relationship="rootViewController" id="XpG-CX-dQH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ap8-0G-o6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1571.0144927536232" y="19.419642857142858"/>
+        </scene>
+        <!--SyllablesVC-->
+        <scene sceneID="HaO-Dd-cuu">
+            <objects>
+                <exit id="G55-Lq-eAI" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aro-7f-DYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Lfz-dC-0TC" customClass="SyllablesVC" customModule="Hotaling_Magneto1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sGk-RU-lOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check a word's syllables" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzb-To-RuQ">
+                                <rect key="frame" x="86" y="142" width="243" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.57857650520000004" green="0.64363104100000001" blue="0.63151508570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-sf-jfu">
+                                <rect key="frame" x="60" y="198.5" width="295" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textInput:" destination="G55-Lq-eAI" eventType="editingDidEnd" id="kf9-cZ-R9k"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg8-zc-PbQ">
+                                <rect key="frame" x="60" y="262" width="295" height="81.5"/>
+                                <string key="text">A haiku is a Japanese poem of seventeen syllables, in three lines of five, seven, and five, traditionally evoking images of the natural world.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.57857650520000004" green="0.64363104100000001" blue="0.63151508570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pg8-zc-PbQ" firstAttribute="top" secondItem="SNW-sf-jfu" secondAttribute="bottom" constant="29.5" id="6TT-JZ-dUA"/>
+                            <constraint firstItem="dzb-To-RuQ" firstAttribute="top" secondItem="pXp-Bg-IYs" secondAttribute="top" constant="86" id="G9g-hU-vlE"/>
+                            <constraint firstItem="pXp-Bg-IYs" firstAttribute="trailing" secondItem="dzb-To-RuQ" secondAttribute="trailing" constant="85" id="HwB-ER-NXB"/>
+                            <constraint firstItem="dzb-To-RuQ" firstAttribute="leading" secondItem="pXp-Bg-IYs" secondAttribute="leading" constant="86" id="STR-PQ-7kR"/>
+                            <constraint firstItem="pXp-Bg-IYs" firstAttribute="trailing" secondItem="SNW-sf-jfu" secondAttribute="trailing" constant="59" id="V7J-dv-LFY"/>
+                            <constraint firstItem="pXp-Bg-IYs" firstAttribute="trailing" secondItem="Pg8-zc-PbQ" secondAttribute="trailing" constant="59" id="WIw-CZ-swf"/>
+                            <constraint firstItem="Pg8-zc-PbQ" firstAttribute="leading" secondItem="pXp-Bg-IYs" secondAttribute="leading" constant="60" id="c08-Xk-vgZ"/>
+                            <constraint firstItem="SNW-sf-jfu" firstAttribute="leading" secondItem="pXp-Bg-IYs" secondAttribute="leading" constant="60" id="ePL-Fo-Amu"/>
+                            <constraint firstItem="SNW-sf-jfu" firstAttribute="top" secondItem="dzb-To-RuQ" secondAttribute="bottom" constant="37" id="f0f-Sa-y4X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pXp-Bg-IYs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LR9-9k-ikw">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="YXP-ZQ-RjU">
+                            <connections>
+                                <segue destination="G55-Lq-eAI" kind="unwind" unwindAction="unwindToMainWithSegue:" id="1kS-a4-Wmw"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Check" id="1BU-KP-b14">
+                            <connections>
+                                <action selector="syllables:" destination="Lfz-dC-0TC" id="guq-nx-w4a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="syllaLabel" destination="dzb-To-RuQ" id="GQi-St-Gmb"/>
+                        <outlet property="textInput" destination="SNW-sf-jfu" id="975-ZI-nba"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2481.1594202898555" y="734.59821428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k9n-Tc-oel">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5c3-Uu-jDV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pqt-h5-oRU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Lfz-dC-0TC" kind="relationship" relationship="rootViewController" id="zip-Yf-LfJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAM-3i-fEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569.5652173913045" y="734.59821428571422"/>
+        </scene>
+    </scenes>
+</document>
